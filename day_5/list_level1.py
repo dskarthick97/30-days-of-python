@@ -1,4 +1,5 @@
 # Day 5
+# Level 1
 
 empty_list = [] # empty list can be also declared as list()
 
@@ -42,14 +43,17 @@ it_companies.append('IBM')
 
 it_companies[middle_company_index] = 'Tesla'
 
-it_companies[0].upper()
+print(it_companies[0].upper())
 
 companies = '# '.join(it_companies)
+print(companies)
 
 print('Google' in it_companies)
 
-print(it_companies.sort())
-print(it_companies.sort(reverse=True))
+it_companies.sort()
+print(it_companies)
+it_companies.sort(reverse=True)
+print(it_companies)
 
 print(it_companies[0:3])
 
@@ -65,7 +69,11 @@ del it_companies
 
 front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
 back_end = ['Node','Express', 'MongoDB']
-end_to_end = front_end.extend(back_end)
-print(end_to_end)
+front_end.extend(back_end)
+print(front_end)
 
-full_stack = end_to_end.copy()
+full_stack = front_end.copy()
+item_index = full_stack.index('Redux')
+full_stack.insert(item_index + 1, 'Python')
+full_stack.insert(item_index + 2, 'SQL')
+print(full_stack)
